@@ -1,7 +1,7 @@
 #ifndef __PREDEF_STDC_H
 #define __PREDEF_STDC_H
 
-#include "../common/version.h"
+#include <predef/common/version.h>
 
 #define PREDEF_C_DETECTED                       0
 

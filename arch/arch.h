@@ -3,8 +3,8 @@
 
 #define PREDEF_ARCH_DETECTED                    0
 
-#include "x64.h"
-#include "x86.h"
+#include <predef/arch/x64.h>
+#include <predef/arch/x86.h>
 
 #if (PREDEF_ARCH_DETECTED == 0)
 #   warning "Do not detect cpu architechture"

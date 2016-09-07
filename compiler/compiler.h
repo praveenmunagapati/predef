@@ -3,10 +3,10 @@
 
 #define PREDEF_COMPILER_DETECTED                0
 
-#include "msvc.h"
-#include "gcc.h"
-#include "cx51.h"
-#include "c51.h"
+#include <predef/compiler/msvc.h>
+#include <predef/compiler/gcc.h>
+#include <predef/compiler/cx51.h>
+#include <predef/compiler/c51.h>
 
 #if (PREDEF_COMPILER_DETECTED == 0)
 #   warning "Do not detect compiler"

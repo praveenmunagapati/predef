@@ -1,11 +1,7 @@
 #ifndef __PREDEF_OS_WIN32_64_H
 #define __PREDEF_OS_WIN32_64_H
 
-#include "../common/version.h"
-
-#ifndef PREDEF_OS_DETECTED
-#   define PREDEF_OS_DETECTED                   0
-#endif
+#include <predef/common/version.h>
 
 #define PREDEF_OS_WINDOWS                       PREDEF_VERSION_NOT_AVAILABLE
 

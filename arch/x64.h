@@ -1,11 +1,7 @@
 #ifndef __PREDEF_ARCH_X64
 #define __PREDEF_ARCH_X64
 
-#include "../common/version.h"
-
-#ifndef PREDEF_ARCH_DETECTED
-#   define PREDEF_ARCH_DETECTED                 0
-#endif
+#include <predef/common/version.h>
 
 #define PREDEF_ARCH_X86_64                      PREDEF_VERSION_NOT_AVAILABLE
 

@@ -1,9 +1,9 @@
 #ifndef __PREDEF_STDCXX_H
 #define __PREDEF_STDCXX_H
 
-#include "../common/version.h"
+#include <predef/common/version.h>
 
-#define PREDEF_CXX_DETECTED 0
+#define PREDEF_CXX_DETECTED                     0
 
 #define PREDEF_CXX_VERSION                      PREDEF_VERSION_NOT_AVAILABLE
 #define PREDEF_VERSION_CXX98                    199711

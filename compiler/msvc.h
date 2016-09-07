@@ -1,11 +1,7 @@
 #ifndef __PREDEF_MSVC_H
 #define __PREDEF_MSVC_H
 
-#include "../common/version.h"
-
-#ifndef PREDEF_COMPILER_DETECTED
-#   define PREDEF_COMPILER_DETECTED             0
-#endif
+#include <predef/common/version.h>
 
 #define PREDEF_COMPILER_MSVC_7_1                PREDEF_VERSION_MAKE(1310/100-6,1310%100,0)      /* Visual C++ .NET 2003 */
 #define PREDEF_COMPILER_MSVC_8_0                PREDEF_VERSION_MAKE(1400/100-6,1400%100,0)      /* Visaul C++ 2005 */
@@ -18,7 +14,7 @@
 #define PREDEF_COMPILER_MSVC                    PREDEF_VERSION_NOT_AVAILABLE
 
 #if (PREDEF_COMPILER_DETECTED == 0)
-#   if (!PREDEF_COMPILER_DETECTED) && defined(_MSC_VER)
+#   if defined(_MSC_VER)
 #      undef PREDEF_COMPILER_MSVC
 #      if !defined (_MSC_FULL_VER)
 #         define PREDEF_COMPILER_MSVC_BUILD     0
@@ -41,29 +37,6 @@
 #      undef  PREDEF_COMPILER_DETECTED
 #      define PREDEF_COMPILER_DETECTED          1
 #      define PREDEF_COMPILER_NAME              "Microsoft C/C++ compiler"
-#      define PREDEF_HAS_PRAGMA_ONCE
-#      if (PREDEF_COMPILER_MSVC >= PREDEF_COMPILER_MSVC_8_0)
-#         define PREDEF_HAS_VARIADIC_MACROS
-#      endif
-#      define PREDEF_HAS_MS_INT64
-#      if defined(_MSC_EXTENSIONS) || (PREDEF_COMPILER_MSVC >= PREDEF_COMPILER_MSVC_8_0)
-#         define PREDEF_HAS_LONG_LONG
-#      endif
-#      if (PREDEF_COMPILER_MSVC >= PREDEF_VERSION_MAKE(1800/100-6,1800%100,20827))
-#         define PREDEF_HAS_FENV_H
-#      endif
-#      if (PREDEF_COMPILER_MSVC >= PREDEF_COMPILER_MSVC_7_1)
-#         define PREDEF_HAS_LIMITS_H
-#      endif
-#      if (PREDEF_COMPILER_MSVC >= PREDEF_COMPILER_MSVC_10_0)
-#         define PREDEF_HAS_STDINT_H
-#      endif
-#      define PREDEF_HAS_STDDEF_H
-#      define PREDEF_HAS_STDIO_H
-#      define PREDEF_HAS_STDARG_H
-#      define PREDEF_HAS_STRING_H
-#      define PREDEF_HAS_STDLIB_H
-#      define PREDEF_HAS_WINDOWS_H
 #   endif
 #endif
 

@@ -1,20 +1,16 @@
 #ifndef __PREDEF_GCC_H
 #define __PREDEF_GCC_H
 
-#include "../common/version.h"
-
-#ifndef PREDEF_COMPILER_DETECTED
-#   define PREDEF_COMPILER_DETECTED             0
-#endif
+#include <predef/common/version.h>
 
 #define PRDEF_COMPILER_GCC_3_0_0                PRDEF_VERSION_MAKE(3,0,0)
 
 #define PRDEF_COMPILER_GCC                      PRDEF_VERSION_NOT_AVAILABLE
 
 #if (PREDEF_COMPILER_DETECTED == 0)
-#   if (!PRDEF_COMPILER_DETECTED) && defined(__GNUC__)
+#   if defined(__GNUC__)
 #      undef PRDEF_COMPILER_GCC
-#      ifdef __GNUC_PATCHLEVEL__
+#      if defined(__GNUC_PATCHLEVEL__)
 #         define PRDEF_COMPILER_GCC             PRDEF_VERSION_MAKE(__GNUC__,__GNUC_MINOR__,__GNUC_PATCHLEVEL__)
 #      else
 #         define PRDEF_COMPILER_GCC             PRDEF_VERSION_MAKE(__GNUC__,__GNUC_MINOR__,0)

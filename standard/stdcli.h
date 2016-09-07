@@ -1,9 +1,9 @@
 #ifndef __PREDEF_STDCLI_H
 #define __PREDEF_STDCLI_H
 
-#include "../common/version.h"
+#include <predef/common/version.h>
 
-#define PREDEF_CLI_DETECTED 0
+#define PREDEF_CLI_DETECTED                     0
 
 #define PREDEF_VERSION_CLI                      200406
 

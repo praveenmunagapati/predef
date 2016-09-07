@@ -1,13 +1,11 @@
 #ifndef __PREDEF_H
 #define __PREDEF_H
 
-#include "common/version.h"
-#include "common/assert.h"
-#include "arch/arch.h"
-#include "compiler/compiler.h"
-#include "os/os.h"
-#include "standard/stdc.h"
-#include "standard/stdcxx.h"
-#include "standard/stdcli.h"
+#include <predef/common/version.h>
+#include <predef/common/assert.h>
+#include <predef/arch/arch.h>
+#include <predef/compiler/compiler.h>
+#include <predef/os/os.h>
+#include <predef/standard/standard.h>
 
 #endif
